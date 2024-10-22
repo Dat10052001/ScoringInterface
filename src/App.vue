@@ -1,16 +1,29 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <LoginScreen v-if="!isLoggedIn" @login="handleLogin"/>
+  <QuestionAnswer v-else/>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import LoginScreen from './components/LoginScreen.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
+    LoginScreen
+  },
+  data() {
+    return {
+      isLoggedIn: false,
+    };
+  },
+  mounted() {
+    this.isLoggedIn = this.$cookies.isKey('username');
+  },
+  methods: {
+    handleLogin() {
+      this.isLoggedIn = true;
+    },
+  },
 }
 </script>
 
