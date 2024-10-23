@@ -49,15 +49,15 @@ export default {
 
 <style>
 .login-screen {
-background-image: url('@/assets/background.png');
-background-size: cover;
-background-position: center;
-background-repeat: no-repeat;
-height: 100vh;
-margin: 0;
-display: flex;
-justify-content: center; 
-align-items: center;
+  background-image: url('@/assets/background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
 }
 
 .login-container {
@@ -65,7 +65,7 @@ align-items: center;
   padding: 6% 5%;
   border-radius: 5%;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  width: 30%;
+  width: 40%;
 }
 
 .login-container>label {
@@ -78,10 +78,10 @@ align-items: center;
 
 .login-container>input {
   width: 100%; 
-  padding: 10px;
+  padding: 3%;
   margin-bottom: 10%;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 15px;
   box-sizing: border-box;
   font-size: 40px;
 }
@@ -89,7 +89,7 @@ align-items: center;
 .login-container>button {
   margin-top: 20px;
   width: 100%;
-  padding: 2% 0;
+  padding: 3% 0;
   border: none;
   border-radius: 15px;
   background-color: #007bff;

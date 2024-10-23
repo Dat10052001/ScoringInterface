@@ -1,15 +1,17 @@
 <template>
   <LoginScreen v-if="!isLoggedIn" @login="handleLogin"/>
-  <QuestionAnswer v-else/>
+  <ScoringMenu v-else/>
 </template>
 
 <script>
 import LoginScreen from './components/LoginScreen.vue'
+import ScoringMenu from './components/ScoringMenu.vue'
 
 export default {
   name: 'App',
   components: {
-    LoginScreen
+    LoginScreen,
+    ScoringMenu,
   },
   data() {
     return {
@@ -28,12 +30,14 @@ export default {
 </script>
 
 <style>
+@import url('https://fonts.cdnfonts.com/css/utm-avo');
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'UTM Avo', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin: -8px;
 }
 </style>

@@ -13,7 +13,7 @@ export async function login(username, password) {
   }
 }
 
-export async function sendAnswer(username, indexQuestion, question, score) {
+export async function sendScore(username, indexQuestion, question, score) {
   try {
     await writeData(`score/${username}/${indexQuestion}`, {
       question,
